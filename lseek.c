@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	int whence = SEEK_SET-1;
+	int whence = SEEK_SET - 1;
 	FILE *file;
 	int fd;
 	off_t res, ofs;
@@ -21,7 +21,7 @@ int main(void)
 	printf("user file:%p\n", file);
 	fd = fileno(file);
 	if (fd) {
-		ofs = 1;
+		ofs = 10;
 		while (whence++ < SEEK_END) {
 			res = lseek(fd, ofs, whence);
 			printf("res:%d\n", (int)res);
